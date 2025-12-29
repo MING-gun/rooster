@@ -145,27 +145,61 @@ if (uni.restoreGlobal) {
     __name: "carousel",
     setup(__props, { expose: __expose }) {
       __expose();
-      const isVisible = vue.ref(false);
-      vue.onMounted(() => {
-        setTimeout(() => {
-          isVisible.value = true;
-        }, 50);
-      });
-      const __returned__ = { isVisible, onMounted: vue.onMounted, ref: vue.ref };
+      const imgs = vue.ref(["/static/logo.png", "/static/logo.png", "/static/logo.png"]);
+      const current = vue.ref(0);
+      const onChange = (e) => {
+        current.value = e.detail.current;
+      };
+      const goLogin = () => {
+        uni.navigateTo({ url: "/pages/login/login" });
+      };
+      const __returned__ = { imgs, current, onChange, goLogin, ref: vue.ref };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
   };
   function _sfc_render(_ctx, _cache, $props, $setup, $data, $options) {
-    return vue.openBlock(), vue.createElementBlock(
-      "view",
-      {
-        class: vue.normalizeClass(["carousel-container", { "fade-in": $setup.isVisible }])
-      },
-      " carousel ",
-      2
-      /* CLASS */
-    );
+    return vue.openBlock(), vue.createElementBlock("view", { class: "carousel-wrapper" }, [
+      vue.createElementVNode("view", {
+        class: "skip",
+        onClick: vue.withModifiers($setup.goLogin, ["stop"])
+      }, "跳过"),
+      vue.createElementVNode(
+        "swiper",
+        {
+          class: "swiper",
+          "indicator-dots": "true",
+          "indicator-color": "rgba(255,255,255,0.5)",
+          "indicator-active-color": "#fff",
+          autoplay: "false",
+          onChange: $setup.onChange
+        },
+        [
+          (vue.openBlock(true), vue.createElementBlock(
+            vue.Fragment,
+            null,
+            vue.renderList($setup.imgs, (img, idx) => {
+              return vue.openBlock(), vue.createElementBlock("swiper-item", { key: idx }, [
+                vue.createElementVNode("image", {
+                  class: "slide-image",
+                  src: img,
+                  mode: "aspectFill"
+                }, null, 8, ["src"]),
+                idx === $setup.imgs.length - 1 ? (vue.openBlock(), vue.createElementBlock("view", {
+                  key: 0,
+                  class: "login-button",
+                  onClick: vue.withModifiers($setup.goLogin, ["stop"])
+                }, "点击登录")) : vue.createCommentVNode("v-if", true)
+              ]);
+            }),
+            128
+            /* KEYED_FRAGMENT */
+          ))
+        ],
+        32
+        /* NEED_HYDRATION */
+      )
+    ]);
   }
   const PagesCarouselCarousel = /* @__PURE__ */ _export_sfc(_sfc_main$1, [["render", _sfc_render], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/carousel/carousel.vue"]]);
   __definePage("pages/start/start", PagesStartStart);

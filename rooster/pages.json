@@ -39,7 +39,8 @@
 		{
 			"path": "pages/carousel/carousel",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		}
 	],
