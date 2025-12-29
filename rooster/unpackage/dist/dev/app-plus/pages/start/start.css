@@ -1,0 +1,17 @@
+
+.start-container {
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  height:100vh;
+  background:#fff;
+  transition: opacity 0.4s ease;
+  opacity:1;
+}
+.start-container.fade-out {
+  opacity:0;
+}
+.start-container uni-image {
+  width: 120px;
+  height: 120px;
+}

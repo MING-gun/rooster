@@ -1,0 +1,13 @@
+
+.carousel-container {
+  height:100vh;
+  display:flex;
+  align-items:center;
+  justify-content:center;
+  background:#fff;
+  opacity:0;
+  transition: opacity 0.4s ease;
+}
+.carousel-container.fade-in {
+  opacity:1;
+}
