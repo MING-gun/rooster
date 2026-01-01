@@ -131,11 +131,68 @@ if (uni.restoreGlobal) {
     return vue.openBlock(), vue.createElementBlock("view", null, " community ");
   }
   const PagesCommunityCommunity = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/community/community.vue"]]);
-  const _sfc_main$3 = {};
-  function _sfc_render$2(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", null, " home ");
+  const _sfc_main$3 = {
+    __name: "home",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const onIconClick = (index) => {
+        formatAppLog("log", "at pages/home/home.vue:24", "icon clicked:", index);
+      };
+      const __returned__ = { onIconClick };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$2(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "home" }, [
+      vue.createElementVNode("swiper", {
+        class: "carousel",
+        "indicator-dots": "true",
+        autoplay: "true",
+        interval: "3000",
+        circular: "true"
+      }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(3, (i) => {
+            return vue.createElementVNode("swiper-item", { key: i }, [
+              vue.createElementVNode("image", {
+                class: "slide-img",
+                mode: "aspectFill",
+                src: _imports_0
+              })
+            ]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ]),
+      vue.createElementVNode("view", { class: "icons" }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(6, (n) => {
+            return vue.createElementVNode("view", {
+              class: "icon-item",
+              key: n,
+              onClick: ($event) => $setup.onIconClick(n)
+            }, [
+              vue.createElementVNode("image", {
+                class: "icon-img",
+                src: _imports_0,
+                mode: "aspectFit"
+              }),
+              vue.createElementVNode("text", { class: "icon-title" }, "logo")
+            ], 8, ["onClick"]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ])
+    ]);
   }
-  const PagesHomeHome = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/home/home.vue"]]);
+  const PagesHomeHome = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-07e72d3c"], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/home/home.vue"]]);
   const _sfc_main$2 = {};
   function _sfc_render$1(_ctx, _cache) {
     return vue.openBlock(), vue.createElementBlock("view", null, " my ");

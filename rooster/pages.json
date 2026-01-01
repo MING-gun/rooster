@@ -27,7 +27,8 @@
 		{
 			"path": "pages/home/home",
 			"style": {
-				"navigationBarTitleText": ""
+				"navigationBarTitleText": "",
+				"navigationStyle": "custom"
 			}
 		},
 		{
