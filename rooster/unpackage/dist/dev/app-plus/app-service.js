@@ -245,11 +245,80 @@ if (uni.restoreGlobal) {
     ]);
   }
   const PagesHomeHome = /* @__PURE__ */ _export_sfc(_sfc_main$3, [["render", _sfc_render$2], ["__scopeId", "data-v-07e72d3c"], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/home/home.vue"]]);
-  const _sfc_main$2 = {};
-  function _sfc_render$1(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", null, " my ");
+  const _sfc_main$2 = {
+    __name: "my",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const onEntryClick = (key) => {
+        formatAppLog("log", "at pages/my/my.vue:41", "跳转入口 点击：", key);
+      };
+      const __returned__ = { onEntryClick, reactive: vue.reactive };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$1(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "profile" }, [
+      vue.createElementVNode("view", { class: "header" }, [
+        vue.createElementVNode("image", {
+          class: "avatar",
+          src: _imports_0,
+          mode: "aspectFill"
+        }),
+        vue.createElementVNode("view", { class: "user-info" }, [
+          vue.createElementVNode("text", { class: "username" }, "测试项目"),
+          vue.createElementVNode("text", { class: "userid" }, "测试项目")
+        ])
+      ]),
+      vue.createElementVNode("view", { class: "stats" }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(3, (i) => {
+            return vue.createElementVNode("view", {
+              class: "stat",
+              key: i,
+              onClick: _cache[0] || (_cache[0] = ($event) => $setup.onEntryClick("测试项目"))
+            }, [
+              vue.createElementVNode("text", { class: "stat-label" }, "测试项目"),
+              vue.createElementVNode("text", { class: "stat-value" }, "27")
+            ]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ]),
+      vue.createElementVNode("view", { class: "menu" }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(5, (i) => {
+            return vue.createElementVNode("view", {
+              class: "menu-item",
+              key: i,
+              onClick: _cache[1] || (_cache[1] = ($event) => $setup.onEntryClick("测试项目"))
+            }, [
+              vue.createElementVNode("view", { class: "menu-left" }, [
+                vue.createElementVNode("image", {
+                  class: "menu-icon",
+                  src: _imports_0,
+                  mode: "aspectFill"
+                })
+              ]),
+              vue.createElementVNode("text", { class: "menu-title" }, "测试项目"),
+              vue.createElementVNode("view", { class: "menu-action" }, [
+                vue.createElementVNode("text", { class: "entry" }, "跳转入口"),
+                vue.createElementVNode("text", { class: "arrow" }, "›")
+              ])
+            ]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ])
+    ]);
   }
-  const PagesMyMy = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/my/my.vue"]]);
+  const PagesMyMy = /* @__PURE__ */ _export_sfc(_sfc_main$2, [["render", _sfc_render$1], ["__scopeId", "data-v-2f1ef635"], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/my/my.vue"]]);
   const _sfc_main$1 = {
     __name: "carousel",
     setup(__props, { expose: __expose }) {

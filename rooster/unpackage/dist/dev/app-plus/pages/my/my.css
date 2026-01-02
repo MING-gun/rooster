@@ -1,0 +1,92 @@
+
+.profile[data-v-2f1ef635] {
+  padding: 18px;
+  background: #f3f9ff; /* 浅蓝背景 */
+  min-height: 100vh;
+}
+.header[data-v-2f1ef635] {
+  display: flex;
+  align-items: center;
+  background: #fff;
+  padding: 14px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(47,149,255,0.06);
+}
+.avatar[data-v-2f1ef635] {
+  width: 64px;
+  height: 64px;
+  border-radius: 50px;
+  margin-right: 12px;
+}
+.user-info[data-v-2f1ef635] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.username[data-v-2f1ef635] {
+  font-size: 18px;
+  color: #000;
+  font-weight: 700;
+}
+.userid[data-v-2f1ef635] {
+  font-size: 12px;
+  color: #000;
+  opacity: 0.7;
+  margin-top: 6px;
+}
+.stats[data-v-2f1ef635] {
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  margin-top: 12px;
+}
+.stat[data-v-2f1ef635] {
+  background: #fff;
+  flex: 1;
+  padding: 12px;
+  border-radius: 8px;
+  text-align: center;
+  box-shadow: 0 2px 8px rgba(47,149,255,0.04);
+}
+.stat[data-v-2f1ef635]:last-child { margin-right: 0;
+}
+.stat-value[data-v-2f1ef635] { font-size: 16px; color: #000; font-weight: 700;
+}
+.stat-label[data-v-2f1ef635] { font-size: 12px; color: #000; margin-top: 6px; opacity: 0.85;
+}
+.menu[data-v-2f1ef635] {
+  margin-top: 14px;
+}
+.menu-item[data-v-2f1ef635] {
+  background: #fff;
+  padding: 12px 14px;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 12px;
+  border: 1px solid rgba(47,149,255,0.06);
+}
+.menu-left[data-v-2f1ef635] { margin-right: 12px;
+}
+.menu-icon[data-v-2f1ef635] { width: 36px; height: 36px; border-radius: 6px;
+}
+.menu-title[data-v-2f1ef635] { font-size: 15px; color: #000; flex: 1; margin-left: 6px;
+}
+.menu-action[data-v-2f1ef635] { display: flex; align-items: center;
+}
+.entry[data-v-2f1ef635] { font-size: 13px; color: #000; margin-right: 8px; font-weight: 600
+}
+.arrow[data-v-2f1ef635] { color: #000; font-size: 18px; opacity: 0.5;
+}
+
+/* 小屏微调 */
+@media (max-width: 360px) {
+.avatar[data-v-2f1ef635] { width: 56px; height: 56px;
+}
+.username[data-v-2f1ef635] { font-size: 16px
+}
+.menu-icon[data-v-2f1ef635] { width: 30px; height: 30px
+}
+}
