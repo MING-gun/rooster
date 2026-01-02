@@ -136,9 +136,12 @@ if (uni.restoreGlobal) {
     setup(__props, { expose: __expose }) {
       __expose();
       const onIconClick = (index) => {
-        formatAppLog("log", "at pages/home/home.vue:24", "icon clicked:", index);
+        formatAppLog("log", "at pages/home/home.vue:44", "icon clicked:", index);
       };
-      const __returned__ = { onIconClick };
+      const onNewsClick = (index) => {
+        formatAppLog("log", "at pages/home/home.vue:50", "news clicked:", index);
+      };
+      const __returned__ = { onIconClick, onNewsClick };
       Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
       return __returned__;
     }
@@ -184,6 +187,55 @@ if (uni.restoreGlobal) {
                 mode: "aspectFit"
               }),
               vue.createElementVNode("text", { class: "icon-title" }, "logo")
+            ], 8, ["onClick"]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ]),
+      vue.createElementVNode("view", { class: "news-list" }, [
+        vue.createElementVNode("text", { class: "section-title" }, "推文"),
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(6, (i) => {
+            return vue.createElementVNode("view", {
+              class: "news-item",
+              key: "news-" + i,
+              onClick: ($event) => $setup.onNewsClick(i)
+            }, [
+              vue.createElementVNode("image", {
+                class: "news-thumb",
+                src: _imports_0,
+                mode: "aspectFill"
+              }),
+              vue.createElementVNode("view", { class: "news-body" }, [
+                vue.createElementVNode("text", { class: "news-title" }, "测试新闻"),
+                vue.createElementVNode("view", { class: "news-footer" }, [
+                  vue.createElementVNode("text", { class: "news-author" }, "测试单位"),
+                  vue.createElementVNode("view", { class: "news-icons" }, [
+                    (vue.openBlock(), vue.createElementBlock(
+                      vue.Fragment,
+                      null,
+                      vue.renderList(3, (a) => {
+                        return vue.createElementVNode("view", {
+                          class: "action-unit",
+                          key: "a-" + a
+                        }, [
+                          vue.createElementVNode("image", {
+                            class: "action-icon",
+                            src: _imports_0,
+                            mode: "aspectFit"
+                          }),
+                          vue.createElementVNode("text", { class: "action-count" }, "27")
+                        ]);
+                      }),
+                      64
+                      /* STABLE_FRAGMENT */
+                    ))
+                  ])
+                ])
+              ])
             ], 8, ["onClick"]);
           }),
           64
