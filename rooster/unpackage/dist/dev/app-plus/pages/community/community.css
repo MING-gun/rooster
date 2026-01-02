@@ -1,0 +1,112 @@
+
+.community[data-v-a6ef5318] {
+  padding: 14px;
+  background: #f3f8fc; /* 轻微蓝灰背景，增强层次 */
+  min-height: 100vh;
+}
+.header[data-v-a6ef5318] {
+  padding: 14px 8px;
+  text-align: center;
+  background: transparent;
+}
+.title[data-v-a6ef5318] {
+  font-size: 18px;
+  color: #0b1a2b;
+  font-weight: 700;
+  padding: 8px 0;
+}
+.post-list[data-v-a6ef5318] { margin-top: 12px;
+}
+.post-item[data-v-a6ef5318] {
+  display: flex;
+  align-items: flex-start;
+  padding: 14px;
+  border-radius: 12px;
+  background: #fff;
+  margin-bottom: 12px;
+  position: relative;
+  box-shadow: 0 6px 18px rgba(16,78,158,0.06);
+  transition: box-shadow 0.18s ease, transform 0.12s ease;
+  overflow: hidden;
+}
+.post-thumb[data-v-a6ef5318] {
+  width: 96px;
+  height: 68px;
+  border-radius: 8px;
+  margin-right: 14px;
+  flex-shrink: 0;
+  background: #eee;
+}
+.post-content[data-v-a6ef5318] {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  padding-right: 130px; /* 给动作区留出空间 */
+}
+.post-title[data-v-a6ef5318] {
+  font-size: 16px;
+  color: #000;
+  font-weight: 700;
+  line-height: 20px;
+}
+.post-desc[data-v-a6ef5318] {
+  font-size: 13px;
+  color: #444;
+  margin-top: 6px;
+  line-height: 18px;
+}
+.post-meta[data-v-a6ef5318] {
+  display: flex;
+  align-items: center;
+  margin-top: 8px;
+  font-size: 12px;
+  color: #666;
+  gap: 10px;
+}
+.post-actions[data-v-a6ef5318] {
+  position: absolute;
+  right: 12px;
+  bottom: 12px;
+  display: flex;
+  gap: 12px;
+  align-items: center;
+}
+.action[data-v-a6ef5318] {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  padding: 4px 6px;
+}
+.act-icon[data-v-a6ef5318] { width: 18px; height: 18px; margin-right: 6px; opacity: 0.95;
+}
+.act-text[data-v-a6ef5318] {
+  font-size: 12px;
+  color: #000;
+  padding: 0;
+  border-radius: 0;
+  font-weight: 600;
+  opacity: 0.85;
+}
+.load-more[data-v-a6ef5318] {
+  text-align: center;
+  color: #000;
+  opacity: 0.9;
+  margin: 18px 0;
+}
+
+/* 小屏优化 */
+@media (max-width: 360px) {
+.post-thumb[data-v-a6ef5318] { width: 72px; height: 52px
+}
+.title[data-v-a6ef5318] { font-size: 16px
+}
+.post-item[data-v-a6ef5318] { padding: 12px; border-radius: 10px;
+}
+.post-content[data-v-a6ef5318] { padding-right: 100px;
+}
+.action[data-v-a6ef5318] { padding: 3px 4px
+}
+.act-text[data-v-a6ef5318] { padding: 0; font-size: 11px;
+}
+}

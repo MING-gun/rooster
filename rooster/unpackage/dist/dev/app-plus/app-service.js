@@ -126,11 +126,77 @@ if (uni.restoreGlobal) {
     return vue.openBlock(), vue.createElementBlock("view", null, " register ");
   }
   const PagesRegisterRegister = /* @__PURE__ */ _export_sfc(_sfc_main$5, [["render", _sfc_render$4], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/register/register.vue"]]);
-  const _sfc_main$4 = {};
-  function _sfc_render$3(_ctx, _cache) {
-    return vue.openBlock(), vue.createElementBlock("view", null, " community ");
+  const _sfc_main$4 = {
+    __name: "community",
+    setup(__props, { expose: __expose }) {
+      __expose();
+      const onPostClick = (index) => {
+        formatAppLog("log", "at pages/community/community.vue:35", "post clicked:", index);
+      };
+      const onActionClick = (action, index) => {
+        formatAppLog("log", "at pages/community/community.vue:40", "action", action, "on post", index);
+      };
+      const __returned__ = { onPostClick, onActionClick };
+      Object.defineProperty(__returned__, "__isScriptSetup", { enumerable: false, value: true });
+      return __returned__;
+    }
+  };
+  function _sfc_render$3(_ctx, _cache, $props, $setup, $data, $options) {
+    return vue.openBlock(), vue.createElementBlock("view", { class: "community" }, [
+      vue.createElementVNode("view", { class: "header" }, [
+        vue.createElementVNode("text", { class: "title" }, "社区测试")
+      ]),
+      vue.createElementVNode("view", { class: "post-list" }, [
+        (vue.openBlock(), vue.createElementBlock(
+          vue.Fragment,
+          null,
+          vue.renderList(6, (i) => {
+            return vue.createElementVNode("view", {
+              class: "post-item",
+              key: "post-" + i,
+              onClick: ($event) => $setup.onPostClick(i)
+            }, [
+              vue.createElementVNode("image", {
+                class: "post-thumb",
+                src: _imports_0,
+                mode: "aspectFill"
+              }),
+              vue.createElementVNode("view", { class: "post-content" }, [
+                vue.createElementVNode("text", { class: "post-title" }, "社区测试"),
+                vue.createElementVNode("text", { class: "post-desc" }, "社区测试")
+              ]),
+              vue.createElementVNode("view", { class: "post-actions" }, [
+                (vue.openBlock(), vue.createElementBlock(
+                  vue.Fragment,
+                  null,
+                  vue.renderList(3, (a) => {
+                    return vue.createElementVNode("view", {
+                      class: "action",
+                      key: "act-" + a,
+                      onClick: vue.withModifiers(($event) => $setup.onActionClick(a, i), ["stop"])
+                    }, [
+                      vue.createElementVNode("image", {
+                        class: "act-icon",
+                        src: _imports_0,
+                        mode: "aspectFit"
+                      }),
+                      vue.createElementVNode("text", { class: "act-text" }, "27")
+                    ], 8, ["onClick"]);
+                  }),
+                  64
+                  /* STABLE_FRAGMENT */
+                ))
+              ])
+            ], 8, ["onClick"]);
+          }),
+          64
+          /* STABLE_FRAGMENT */
+        ))
+      ]),
+      vue.createElementVNode("view", { class: "load-more" }, "更多 · 社区测试")
+    ]);
   }
-  const PagesCommunityCommunity = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/community/community.vue"]]);
+  const PagesCommunityCommunity = /* @__PURE__ */ _export_sfc(_sfc_main$4, [["render", _sfc_render$3], ["__scopeId", "data-v-a6ef5318"], ["__file", "C:/Users/MING/Desktop/rooster/rooster/pages/community/community.vue"]]);
   const _sfc_main$3 = {
     __name: "home",
     setup(__props, { expose: __expose }) {
